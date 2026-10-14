@@ -1,12 +1,26 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  imports: [FormsModule],
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('first-project');
+
+  title: string = "Access to install educational software on the computer";
+  id: number | null = null;
+
+  /** האם המשתמש אישר את התקנון */
+  question = signal(false);
+
+  /** נקרא בכל שינוי של התיבה ומעדכן את הסיגנל לערך המדויק שלה */
+  onQuestionChange(event: Event): void {
+    this.question.set((event.target as HTMLInputElement).checked);
+  }
+
+  checkTheCheckbox(): void {
+    // TODO: כאן תבוא הפעולה שתרצה לבצע בלחיצה על "היכנס"
+  }
 }
