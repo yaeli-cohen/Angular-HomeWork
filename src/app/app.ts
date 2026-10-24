@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Marks } from './marks/marks';  
 
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, Marks],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css'

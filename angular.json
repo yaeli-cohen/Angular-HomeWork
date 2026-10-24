@@ -59,7 +59,11 @@
               "buildTarget": "first-project:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 4300,
+            "open": true
+          }
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"

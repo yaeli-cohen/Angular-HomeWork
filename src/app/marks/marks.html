@@ -1,0 +1,20 @@
+<p>marks works!</p>
+
+<ul>
+  @for (m of marks; track $index) {
+    
+    <li>
+      @if (m.mark >= passMark) {
+        {{ m.subject }} : {{ m.mark }} - עבר
+      } @else {
+        
+        {{ m.subject }} : {{ m.mark }} -<span class="failed"> לא עבר</span>
+      }
+    </li>
+}
+     the avage is: {{avg }}
+  
+</ul>
+
+ <p> </p> 
+  
