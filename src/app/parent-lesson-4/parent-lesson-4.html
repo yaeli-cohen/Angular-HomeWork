@@ -1,0 +1,15 @@
+<p>parent-lesson-4 works!</p>
+
+<app-child-lesson-4 [electricalItems]="electricalItems" [selectedItem]="itemDetails"></app-child-lesson-4>
+@for (item of electricalItems; track item.name) {
+  <br>
+  <h4>{{item.name}}</h4>
+    <p>{{item.description}}</p>
+    <b>price: {{item.price}}</b>
+    <p>price after discount: {{item.price*(1-item.discountpercent/100)}}$</p>
+    @if ((item.discountpercent*item.price/100 > 300)) {
+      <b>הנחה משתלמת!!!</b>
+    }
+    <br>
+
+}

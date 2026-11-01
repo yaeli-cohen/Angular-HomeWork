@@ -1,14 +1,18 @@
-<h1>Heollo World</h1><br>
-<h1>my title is: {{ title }}</h1><br>
+<h1>Hello World</h1><br>
+<!-- <h1>my title is: {{ title }}</h1><br>
 <h3>my id is: {{ id }}</h3><br>
 <input type="number" [(ngModel)]="id" placeholder="insert your id..."><br>
 
 <p>my id is: {{ id }}</p>
 
+<p>question is: {{ question() }}</p>
+<app-marks></app-marks> -->
+
 <label>
   <input type="checkbox" [checked]="question()" (change)="onQuestionChange($event)">
-האם קראת ואישרת את התקנון?</label>
+  האם קראת ואישרת את התקנון?
+</label>
 
-<!-- <p>question is: {{ question() }}</p> -->
-<button (click)="checkTheCheckbox()" [disabled]="!question()"> היכנס</button> <br><br>
-<app-marks></app-marks>
+<button (click)="goToParentLesson4()" [disabled]="!question()">היכנס</button> <br><br>
+
+<router-outlet></router-outlet>
