@@ -8,11 +8,13 @@
 <p>question is: {{ question() }}</p>
 <app-marks></app-marks> -->
 
-<label>
+ <label>
   <input type="checkbox" [checked]="question()" (change)="onQuestionChange($event)">
   האם קראת ואישרת את התקנון?
 </label>
-
+<!--
 <button (click)="goToParentLesson4()" [disabled]="!question()">היכנס</button> <br><br>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+<app-parent-lesson-5></app-parent-lesson-5>

@@ -2,9 +2,10 @@ import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 import { Marks } from './marks/marks';
-
+import { ParentLesson5 } from './parent-lesson-5/parent-lesson-5';
+import { ChildLesson5 } from './child-lesson-5/child-lesson-5';
 @Component({
-  imports: [FormsModule, Marks, RouterOutlet],
+  imports: [FormsModule, Marks, RouterOutlet, ParentLesson5, ChildLesson5],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css'
